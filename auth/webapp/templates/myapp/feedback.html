@@ -1,0 +1,20 @@
+{% include "myapp/base.html" %}
+{% block content %}
+  
+<div style="font-size: 21px;line-height: 1.428571;color: #47c16d; margin: 50px; margin-left:400px">
+      <form method='post' action="/feedback">
+            {% csrf_token %}
+            <div class="mb-3" style="width: 424px;height: 72px;">
+                  Full Name:
+                  <input type="text" class="form-control"id='name' name='name'value="{{ user.first_name }}">
+                  Email address
+                  <input type="email" class="form-control"id='email' name='email'value="{{ user.email }}">
+                  Your Feedback Write Here
+                  <textarea class="form-control" id="message" name="message" rows="3" placeholder="Write Your Text Here."></textarea>
+                  <button type="submit" class="btn btn-primary" style="border: 9px solid transparent;">Submit</button>
+            </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+      </form>
+</div>
+{% endblock content %}

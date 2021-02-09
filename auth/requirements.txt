@@ -1,0 +1,6 @@
+Django==2.1.7
+
+
+
+
+# pipreqs --force      #this command use to check requirements

@@ -1,0 +1,23 @@
+{% include "myapp/base.html" %}
+
+{% for user in info %}
+<style>
+      .center {
+            margin-left: 400px;
+            margin-right:400px ;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 3px solid green;
+      }
+</style>
+
+<div class="center">
+      <h1>{{ user.name}}</h1>
+      Email:<h2>{{ user.email }}</h2>
+      Message:<h3>{{ user.message }}</h3>
+      Date:<h4>{{ user.date }}</h4>
+
+      ----------------------------
+</div>
+{% endfor %}
